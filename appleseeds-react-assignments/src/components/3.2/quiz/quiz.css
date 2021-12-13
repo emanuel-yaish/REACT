@@ -1,0 +1,6 @@
+.quiz {
+  margin: 5rem;
+  border: 0.3rem solid black;
+  padding: 2rem;
+  display: inline-block;
+}

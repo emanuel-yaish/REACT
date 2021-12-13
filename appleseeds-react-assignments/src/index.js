@@ -4,7 +4,8 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 // import Quiz from "./components/3.2/quiz/quiz";
 // import App from "./components/4.1/App/App";
-import App from "./components/4.2/App/App";
+// import App from "./components/4.2/App/App";
+import App from "./components/6.1/App/App";
 
 ReactDOM.render(
   <React.StrictMode>

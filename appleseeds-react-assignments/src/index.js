@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Quiz from "./components/3.2/quiz/quiz";
+// import Quiz from "./components/3.2/quiz/quiz";
+import App from "./components/4.1/App/App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Quiz />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

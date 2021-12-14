@@ -7,7 +7,8 @@ import reportWebVitals from "./reportWebVitals";
 // import App from "./components/4.2/App/App";
 // import App from "./components/6.1/App/App";
 // import App from "./components/7.1/App/App";
-import App from "./components/7.2/App/App";
+// import App from "./components/7.2/App/App";
+import App from "./components/7.3/App/App";
 
 ReactDOM.render(
   <React.StrictMode>

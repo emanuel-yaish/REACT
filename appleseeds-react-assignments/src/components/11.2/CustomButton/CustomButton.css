@@ -1,0 +1,19 @@
+.custom-button {
+  margin: 1vh;
+}
+
+input {
+  padding: 1rem;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}

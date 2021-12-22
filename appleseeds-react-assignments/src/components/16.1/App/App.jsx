@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "../components/Header";
 import Homepage from "../components/Homepage";
 import Products from "../components/Products";
-import ProductDetail from "../components/ProductDetail";
+import ProductDetailWrapper from "../components/ProductDetailWrapper";
 import "./App.css";
 
 class App extends React.Component {
@@ -16,7 +16,10 @@ class App extends React.Component {
             <Routes>
               <Route path="/" exact element={<Homepage />} />
               <Route path="/products" element={<Products />} />
-              <Route path="/Productdetail/:id" element={<ProductDetail />} />
+              <Route
+                path="/Productdetail/:id"
+                element={<ProductDetailWrapper />}
+              />
             </Routes>
           </div>
         </BrowserRouter>

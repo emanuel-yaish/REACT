@@ -2,28 +2,31 @@ import React from "react";
 import { products } from "../products";
 
 class ProductDetail extends React.Component {
-  state = { products: [] };
+  state = { products: [], product: null };
   componentDidMount() {
-    const id = this.props.match.params.id;
-    this.fetchData(id);
+    this.fetchData(+this.props.id);
     this.setState({ products });
   }
 
   fetchData = (id) => {
-    const product = products.find((product) => product.id === id);
+    const product = products.find((product) => {
+      if (product.id === id) return true;
+      return false;
+    });
     this.setState({ product });
   };
 
   render() {
+    // if (!this.state.product) return <div></div>;
     return (
       <div>
-        <h2>{this.product.title}</h2>
+        <h2>{this.state.product.title}</h2>
         <div>
-          <img alt={this.product.title} src={this.product.imageUrl} />
+          <img alt={this.state.product.title} src={this.state.imageUrl} />
         </div>
         <div>
-          <span>{this.product.price}</span>
-          <span>{this.product.size}</span>
+          <span>{this.state.product.price}</span>
+          <span>{this.state.product.size}</span>
         </div>
       </div>
     );

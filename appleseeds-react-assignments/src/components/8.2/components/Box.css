@@ -1,0 +1,15 @@
+.box {
+  background-color: red;
+  margin: 1rem 0;
+}
+
+.slide {
+  transform: translateX(-100%);
+  animation: slideIn 3s forwards ease;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}

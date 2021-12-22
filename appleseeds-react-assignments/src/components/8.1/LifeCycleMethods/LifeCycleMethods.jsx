@@ -2,27 +2,26 @@ import React from "react";
 import "./LifeCycleMethods.css";
 
 class LifeCycleMethods extends React.Component {
-  state = { favoriteColor: 0 };
+  state = { favoriteColor: "blue" };
 
-  increment = () => {
-    if (this.state.counter >= 10) return;
-    this.setState((state) => ({ counter: state.counter + 1 }));
+  componentDidMount() {
+    setTimeout(this.updateColor, 1000);
+  }
+
+  componentDidUpdate() {
+    const elemnt = document.querySelector("#favorite-color");
+    elemnt.textContent = "The updated favorite color is red ";
+  }
+
+  updateColor = () => {
+    this.setState({ favoriteColor: "green" });
   };
-
-  decrement = () => {
-    if (this.state.counter <= -10) return;
-    this.setState((state) => ({ counter: state.counter - 1 }));
-  };
-
-  counterColor = () =>
-    this.state.counter > 0 ? "green" : this.state.counter === 0 ? "" : "red";
 
   render() {
     return (
       <div className="life-cycle-methods">
-        <h1>My favorite color is {this.state.favoriteColor}}</h1>
-        <label className={this.counterColor()}>{this.state.counter}</label>
-        <input onClick={this.increment} type="button" value="+" />
+        <h1>My favorite color is {this.state.favoriteColor}</h1>
+        <div id="favorite-color"></div>
       </div>
     );
   }

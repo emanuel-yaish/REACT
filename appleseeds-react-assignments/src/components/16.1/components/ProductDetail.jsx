@@ -4,8 +4,8 @@ import { products } from "../products";
 class ProductDetail extends React.Component {
   state = { products: [], product: null };
   componentDidMount() {
-    this.fetchData(+this.props.id);
     this.setState({ products });
+    this.fetchData(+this.props.id);
   }
 
   fetchData = (id) => {
@@ -17,7 +17,7 @@ class ProductDetail extends React.Component {
   };
 
   render() {
-    // if (!this.state.product) return <div></div>;
+    if (!this.state.product) return <div></div>;
     return (
       <div>
         <h2>{this.state.product.title}</h2>

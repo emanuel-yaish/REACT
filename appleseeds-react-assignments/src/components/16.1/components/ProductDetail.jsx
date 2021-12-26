@@ -2,13 +2,12 @@ import React from "react";
 import { products } from "../products";
 
 class ProductDetail extends React.Component {
-  state = { products: [], product: null };
+  state = { product: null };
   componentDidMount() {
-    this.setState({ products });
-    this.fetchData(+this.props.id);
+    this.findProduct(+this.props.id);
   }
 
-  fetchData = (id) => {
+  findProduct = (id) => {
     const product = products.find((product) => {
       if (product.id === id) return true;
       return false;

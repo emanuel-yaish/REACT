@@ -1,11 +1,11 @@
 import React from "react";
-import Countries from "../components/Countries";
+import Algolia from "../components/Algolia";
 import "./App.css";
 
 function App(props) {
   return (
     <div>
-      <Countries />
+      <Algolia />
     </div>
   );
 }
